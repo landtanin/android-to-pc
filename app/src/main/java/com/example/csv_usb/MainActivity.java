@@ -202,6 +202,10 @@ public class MainActivity extends AppCompatActivity {
         UsbManager manager = (UsbManager) getSystemService(Context.USB_SERVICE);
         usbDeviceConnection = manager.openDevice(device);
 
+        // TODO: Transfer Data
+        // https://developer.android.com/reference/android/hardware/usb/UsbDeviceConnection#bulkTransfer(android.hardware.usb.UsbEndpoint,%20byte[],%20int,%20int,%20int)
+//        usbDeviceConnection.bulkTransfer()
+
         if(usbDeviceConnection != null){
             usbDeviceConnection.claimInterface(usbInterface, forceClaim);
             return true;
